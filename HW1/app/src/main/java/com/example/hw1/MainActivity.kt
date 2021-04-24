@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         var buttonPaperGame : Button? = null //findViewById<ImageButton>(R.id.imageComputer)
         var buttonScissorsGame : Button? = null //findViewById<TextView>(R.id.scoreComputerGame)
 
-        var gameStarted = false
         var rockImg: Drawable? = ResourcesCompat.getDrawable(resources, R.drawable.rock, null)
         var paperImg: Drawable? = ResourcesCompat.getDrawable(resources, R.drawable.paper, null)
         var scissorImg: Drawable? = ResourcesCompat.getDrawable(resources, R.drawable.scissors, null)
@@ -103,19 +102,19 @@ class MainActivity : AppCompatActivity() {
                 scoreComputer?.setTextColor(Color.parseColor("yellow"))
                 scorePlayer?.setTextColor(Color.parseColor("yellow"))
             } else if(chosen == "paper"){
-                scorePlayerNumber++;
+                ++scorePlayerNumber
                 scorePlayer?.text = scorePlayerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("black"))
                 scorePlayer?.setTextColor(Color.parseColor("green"))
             } else {
-                scoreComputerNumber++
+                ++scoreComputerNumber
                 scoreComputer?.text = scoreComputerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("green"))
                 scorePlayer?.setTextColor(Color.parseColor("black"))
             }
         } else if(rand == 1){
             if(chosen == "rock"){
-                scoreComputerNumber++
+                ++scoreComputerNumber
                 scoreComputer?.text = scoreComputerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("green"))
                 scorePlayer?.setTextColor(Color.parseColor("black"))
@@ -123,20 +122,20 @@ class MainActivity : AppCompatActivity() {
                 scoreComputer?.setTextColor(Color.parseColor("#FFFF00"))
                 scorePlayer?.setTextColor(Color.parseColor("#FFFF00"))
             } else {
-                scorePlayerNumber++;
+                ++scorePlayerNumber
                 scorePlayer?.text = scorePlayerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("black"))
                 scorePlayer?.setTextColor(Color.parseColor("green"))
             }
         } else {
             if(chosen == "rock"){
-                scorePlayerNumber++;
+                ++scorePlayerNumber
                 scorePlayer?.text = scorePlayerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("black"))
                 scorePlayer?.setTextColor(Color.parseColor("green"))
             } else if(chosen == "paper"){
-                scoreComputerNumber++;
-                scoreComputer?.text = scorePlayerNumber.toString()
+                ++scoreComputerNumber
+                scoreComputer?.text = scoreComputerNumber.toString()
                 scoreComputer?.setTextColor(Color.parseColor("green"))
                 scorePlayer?.setTextColor(Color.parseColor("black"))
             } else {
