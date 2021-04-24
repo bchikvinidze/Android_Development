@@ -1,13 +1,11 @@
-package com.example.hw1
+package com.nchikvinidze.hw1
 
 import android.graphics.Color
 import android.graphics.drawable.Drawable
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.core.content.res.ResourcesCompat
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     var scoreComputerNumber = 0
