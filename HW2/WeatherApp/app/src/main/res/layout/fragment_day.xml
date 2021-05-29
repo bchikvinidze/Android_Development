@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DayFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="@dimen/largeImageSize"
+        android:layout_height="@dimen/largeImageSize"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:text="5°"
+        android:textColor="@color/white"
+        android:textSize="@dimen/largeTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/weatherStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:text="BROKEN CLOUDS"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/largeMarginTop"
+        android:text="@string/details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize" />
+
+    <LinearLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/staticDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temperaturestatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="@string/temperature"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/feelslikestatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="@string/feelslike"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/humiditystatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="@string/humidity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:id="@+id/pressurestatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="@string/pressure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dynamicDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temperaturedynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/feelslikedynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiditydynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pressuredynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

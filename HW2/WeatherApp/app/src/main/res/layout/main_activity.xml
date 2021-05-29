@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outmost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/night">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/flags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageGeorgia"
+                android:layout_width="@dimen/flagSize"
+                android:layout_height="@dimen/flagSize"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/georgia" />
+
+            <ImageButton
+                android:id="@+id/imageUK"
+                android:layout_width="@dimen/flagSize"
+                android:layout_height="@dimen/flagSize"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uk" />
+
+            <ImageButton
+                android:id="@+id/imageJamaica"
+                android:layout_width="@dimen/flagSize"
+                android:layout_height="@dimen/flagSize"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jamaica" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/capitalName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/textSize"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/largeMarginTop"
+            android:gravity="center"
+            android:text="@string/tbilisi"
+            android:textColor="@color/white" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/dayvshour"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/marginTop" />
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/dayvshour"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footerHeight"
+        android:background="@color/tabbar"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageToday"
+            android:layout_width="@dimen/footerIconDimen"
+            android:layout_height="@dimen/footerIconDimen"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:tint="@color/white"
+            android:src="@drawable/today" />
+
+        <ImageButton
+            android:id="@+id/imageHourly"
+            android:layout_width="@dimen/footerIconDimen"
+            android:layout_height="@dimen/footerIconDimen"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:tint="@color/white"
+            android:src="@drawable/hourly" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

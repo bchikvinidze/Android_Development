@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="london">LONDON</string>
+    <string name="tbilisi">TBILISI</string>
+    <string name="kingston">KINGSTON</string>
+    <string name="details">DETAILS</string>
+    <string name="temperature">Temperature</string>
+    <string name="feelslike">Feels Like</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

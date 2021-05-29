@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="flagSize">50dp</dimen>
+    <dimen name="marginTop">16dp</dimen>
+    <dimen name="largeMarginTop">32dp</dimen>
+    <dimen name="textSize">16dp</dimen>
+    <dimen name="largeTextSize">48dp</dimen>
+    <dimen name="largeImageSize">100dp</dimen>
+    <dimen name="marginLeft">16dp</dimen>
+    <dimen name="marginRight">16dp</dimen>
+    <dimen name="largeMarginLeft">32dp</dimen>
+    <dimen name="footerHeight">50dp</dimen>
+    <dimen name="footerIconDimen">32dp</dimen>
+    <dimen name="hourItemHeight">70dp</dimen>
+    <dimen name="hourIconDimen">70dp</dimen>
+    <dimen name="hourTemperatureSize">24dp</dimen>
+</resources>

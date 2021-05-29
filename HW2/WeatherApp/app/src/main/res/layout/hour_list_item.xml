@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hourItemHeight"
+    android:gravity="center|left"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/marginTop">
+
+    <TextView
+        android:id="@+id/hourDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:gravity="left"
+        android:textColor="@android:color/white"
+        tools:text="01 AM 01 AAA" />
+
+    <ImageView
+        android:id="@+id/hourIcon"
+        android:layout_width="@dimen/hourIconDimen"
+        android:layout_height="@dimen/hourIconDimen"
+        android:layout_marginLeft="@dimen/marginLeft" />
+
+    <TextView
+        android:id="@+id/hourTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/hourTemperatureSize"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:textStyle="bold"
+        android:text="21"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/hourDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:text="broken clouds"
+        android:textColor="@android:color/white"/>
+
+
+</LinearLayout>
