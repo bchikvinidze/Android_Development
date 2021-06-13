@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="searchTextSz">18sp</dimen>
+    <dimen name="fromScreen">16dp</dimen>
+    <dimen name="searchTextHeight">25dp</dimen>
+    <dimen name="roundRad">10dp</dimen>
+    <dimen name="framewidth">1dp</dimen>
+    <dimen name="textsz">16sp</dimen>
+    <dimen name="textszsmol">10sp</dimen>
+    <dimen name="floatingbutton">50dp</dimen>
+    <dimen name="maxlines">2</dimen>
+    <dimen name="toolbarHeight">50dp</dimen>
+    <dimen name="toolbaricondim">20dp</dimen>
+    <dimen name="checkboxSize">20dp</dimen>
+    <dimen name="floatsrcoffset">52dp</dimen>
+</resources>

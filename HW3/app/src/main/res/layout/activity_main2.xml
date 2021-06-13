@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/secondPage"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".second.NewTodoActivity">
+
+    <View
+        android:id="@+id/backToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="@dimen/toolbaricondim"
+        android:layout_height="@dimen/toolbaricondim"
+        android:layout_marginTop="@dimen/fromScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back"
+        android:layout_marginStart="@dimen/fromScreen"
+        android:layout_marginLeft="@dimen/fromScreen" />
+
+    <ImageView
+        android:id="@+id/pinnedIcon"
+        android:layout_width="@dimen/toolbaricondim"
+        android:layout_height="@dimen/toolbaricondim"
+        android:layout_marginTop="@dimen/fromScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_pinned"
+        android:layout_marginEnd="@dimen/fromScreen"
+        android:layout_marginRight="@dimen/fromScreen"
+        android:visibility="visible"
+        android:background="@color/white"
+    />
+
+    <EditText
+        android:id="@+id/newTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="type name here"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/searchTextSz"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:layout_marginLeft="@dimen/fromScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToolbar" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notdonerv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fromScreen"
+        app:layout_constraintStart_toStartOf="@id/newTitle"
+        app:layout_constraintTop_toBottomOf="@+id/newTitle" /> -->
+
+    <LinearLayout
+        android:id="@+id/notdone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/newTitle"
+        app:layout_constraintTop_toBottomOf="@+id/newTitle"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:orientation="vertical"
+        />
+
+    <TextView
+        android:id="@+id/newItemAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ List item"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/textsz"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:layout_marginLeft="@dimen/fromScreen"
+        app:layout_constraintStart_toStartOf="@+id/notdone"
+        app:layout_constraintTop_toBottomOf="@+id/notdone" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/done"
+        app:layout_constraintTop_toBottomOf="@+id/newItemAdd"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/newItemAdd"
+        app:layout_constraintTop_toBottomOf="@+id/newItemAdd"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:orientation="vertical"
+        />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donerv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fromScreen"
+        app:layout_constraintStart_toStartOf="@id/newTaskEdittext"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskEdittext" />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

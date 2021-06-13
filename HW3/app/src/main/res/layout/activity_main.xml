@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/searchEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/searchTextHeight"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:layout_marginRight="@dimen/fromScreen"
+        android:layout_marginLeft="@dimen/fromScreen"
+        android:background="@drawable/roundedview"
+        android:text="@string/editText"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/searchTextSz"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="@dimen/fromScreen"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:layout_marginBottom="@dimen/fromScreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEdittext"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fromScreen">
+
+            <TextView
+                android:id="@+id/pinned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pinned"
+                android:textSize="@dimen/textsz"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pinnedrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/pinned"
+                app:layout_constraintTop_toBottomOf="@+id/pinned" />
+
+            <TextView
+                android:id="@+id/others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fromScreen"
+                android:text="@string/others"
+                android:textSize="@dimen/textsz"
+                app:layout_constraintTop_toBottomOf="@+id/pinnedrv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:visibility="gone"/>
+            />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/othersrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/others"
+                app:layout_constraintTop_toBottomOf="@+id/others" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="@dimen/floatingbutton"
+        android:layout_height="@dimen/floatingbutton"
+        android:layout_marginEnd="@dimen/fromScreen"
+        android:layout_marginRight="@dimen/fromScreen"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/nsv"
+        app:layout_constraintEnd_toEndOf="@+id/nsv"
+        app:fabCustomSize="@dimen/floatsrcoffset"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

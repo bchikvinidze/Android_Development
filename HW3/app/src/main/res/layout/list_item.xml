@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/roundedview"
+    android:layout_marginTop="@dimen/fromScreen"
+    android:layout_marginRight="@dimen/fromScreen"
+    android:layout_weight="1">
+
+
+   <TextView
+       android:id="@+id/todoIdHolder"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:visibility="gone"
+       android:text = "placeholder"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/searchTextSz"
+        android:text="Tmp Text (placeholder title)"
+        android:layout_marginTop="@dimen/fromScreen"
+        android:layout_marginLeft="@dimen/fromScreen"
+        android:layout_marginRight="@dimen/fromScreen"
+        android:layout_marginBottom="@dimen/fromScreen"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="2"
+        android:ellipsize="end"
+   />
+
+   <CheckBox
+       android:id="@+id/checkbox1"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/fromScreen"
+       app:layout_constraintStart_toStartOf="@id/itemTitle"
+       app:layout_constraintTop_toBottomOf="@+id/itemTitle"
+       android:textSize="@dimen/textsz"
+       android:text="item1"
+       android:maxLines="1"
+       android:ellipsize="end"
+       android:visibility="gone"
+       />
+
+   <CheckBox
+       android:id="@+id/checkbox2"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/fromScreen"
+       app:layout_constraintStart_toStartOf="@id/checkbox1"
+       app:layout_constraintTop_toBottomOf="@+id/checkbox1"
+       android:textSize="@dimen/textsz"
+       android:text="item2"
+       android:maxLines="1"
+       android:ellipsize="end"
+       android:visibility="gone"
+       />
+
+   <CheckBox
+       android:id="@+id/checkbox3"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/fromScreen"
+       app:layout_constraintStart_toStartOf="@id/checkbox2"
+       app:layout_constraintTop_toBottomOf="@+id/checkbox2"
+       android:textSize="@dimen/textsz"
+       android:text="item3"
+       android:maxLines="1"
+       android:ellipsize="end"
+       android:visibility="gone"
+       />
+
+   <TextView
+      android:id="@+id/moreuncheckedboxes"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/grey"
+       android:textSize="@dimen/textsz"
+       android:text="..."
+       android:layout_margin="@dimen/fromScreen"
+       app:layout_constraintStart_toStartOf="@id/checkbox3"
+       app:layout_constraintTop_toBottomOf="@+id/checkbox3"
+       android:visibility="gone"
+       />
+
+   <TextView
+       android:id="@+id/checkedboxes"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/grey"
+       android:textSize="@dimen/textszsmol"
+       android:text="+ x checked items"
+       android:layout_marginTop="@dimen/fromScreen"
+       android:layout_marginBottom="@dimen/fromScreen"
+       app:layout_constraintStart_toStartOf="@id/moreuncheckedboxes"
+       app:layout_constraintTop_toBottomOf="@+id/moreuncheckedboxes"
+       android:visibility="gone"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
