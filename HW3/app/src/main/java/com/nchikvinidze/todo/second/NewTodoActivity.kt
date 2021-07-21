@@ -77,7 +77,6 @@ class NewTodoActivity : AppCompatActivity() {
             checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
                 var toMove = buttonView.parent as LinearLayout
                 if(isChecked) {
-                    //toMove.get(0).isEnabled = false
                     toMove.get(1).isEnabled = false
                     toMove.get(2).visibility = View.GONE
                     uncheckedLL.removeView(toMove)
@@ -126,7 +125,6 @@ class NewTodoActivity : AppCompatActivity() {
             newElem.addView(editText)
             newElem.addView(deleteButton)
             if(task.checked){
-                //checkBox.isEnabled = false
                 checkBox.isChecked = true
                 deleteButton.visibility = View.GONE
                 editText.isEnabled = false
@@ -140,7 +138,6 @@ class NewTodoActivity : AppCompatActivity() {
             checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
                 var toMove = buttonView.parent as LinearLayout
                 if(isChecked) {
-                    toMove.get(0).isEnabled = false
                     toMove.get(1).isEnabled = false
                     toMove.get(2).visibility = View.GONE
                     uncheckedLL.removeView(toMove)
